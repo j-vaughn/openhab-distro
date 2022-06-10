@@ -402,6 +402,9 @@ Function Update-openHAB() {
     }
     else {
         $CurrentVersion = $parts[0] + "." + $parts[1] + "." + $parts[2]
+		if($parts.length -eq 4) {
+			$CurrentVersion = $CurrentVersion + "." + $parts[3]
+		}
     }
     Write-Host -ForegroundColor Yellow "The current version is $CurrentVersion"        
     
